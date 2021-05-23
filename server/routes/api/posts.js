@@ -3,7 +3,7 @@ const mongodb = require('mongodb');
 const router = express.Router();
 
 
-const uri = "mongodb+srv://vue123:1234@cluster1.xv3sf.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+const uri = "mongodb+srv://marcos8370:Acer2016@cluster0.72glp.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 const client = new mongodb.MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 
 // listar todos os posts
@@ -35,7 +35,7 @@ router.delete('/:id', async(req, res) => {
 
 async function loadPostsCollection() {
     await client.connect();
-    return client.db('vue_express').collection('posts');
+    return client.db('atv4').collection('posts');
 
 }
 
